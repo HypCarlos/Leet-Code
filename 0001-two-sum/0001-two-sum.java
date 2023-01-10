@@ -1,19 +1,20 @@
 class Solution {
     public int[] twoSum(int[] nums, int target) {
-       int[] indexes = new int[2];
-       HashMap<Integer,Integer> hash = new HashMap<>();
-
-       for (int i = 0; i < nums.length; i++) {
-        // KEY: NUMBER VALUE: INDEX
+     
+        HashMap <Integer,Integer> hash = new HashMap<>();
         
-        int answer = target - nums[i];
-        if (hash.containsKey(answer)) {
-            indexes[0] = i; 
-            indexes[1] = hash.get(answer);
-        return indexes;
+        int[] indexes = new int[2];
+        int answer = 0;
+        
+        for(int i = 0; i < nums.length; i++) {
+            answer = target - nums[i];
+            if (hash.containsKey(answer)) {
+                indexes[0] = i;
+                indexes[1] = hash.get(answer); // value at which key: remainder is found
+}
+            hash.put(nums[i], i);
         }
-        hash.put(nums[i],i);
-       }
-       return indexes;
+        return indexes;
+        
 }
 }
