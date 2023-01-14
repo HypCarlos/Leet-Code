@@ -11,7 +11,7 @@ class Solution {
         */
       
         int profit = 0; // HIGEST CURRENT (INDEX - BUY)
-        int buy = Integer.MAX_VALUE; //MINIMUM PRICE (INTEGER.MAX_VALUE ALLOWS YOU NOT TO WORRY FOR FIRST CASE WHERE BUY WOULD BE ZERO)
+        int buy = Integer.MAX_VALUE; //MINIMUM PRICE (INTEGER.MAX_VALUE ALLOWS YOU NOT TO WORRY FOR FIRST CASE WHERE BUY WOULD BE ZERO- 2147483647)
         
         for(int i=0; i < prices.length; i++) {
             if (prices[i] < buy) {
