@@ -19,6 +19,7 @@ class Solution {
         for (int i = 0; i < s.length(); i++) {
             
              if ( i > 0 && (romanChars.get(s.charAt(i)) > romanChars.get(s.charAt(i - 1))) ){
+                 // * 2 is to remove the original addition 
                  sum += (romanChars.get(s.charAt(i)) - 2 * romanChars.get(s.charAt(i-1)));
              }
           else {
