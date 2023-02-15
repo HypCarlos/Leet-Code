@@ -4,10 +4,10 @@ class Solution {
         HashMap <Integer, Integer> hash = new HashMap<>();
         
         int[] results = new int[2];  // ARRAY OF 2 FOR RESULT
-        int remainder = 0;
+        
         
         for(int i = 0; i < nums.length; i++) {
-            remainder = target - nums[i];
+            int remainder = target - nums[i];
             
             if (hash.containsKey(remainder)) {
                 results[0] = i;
